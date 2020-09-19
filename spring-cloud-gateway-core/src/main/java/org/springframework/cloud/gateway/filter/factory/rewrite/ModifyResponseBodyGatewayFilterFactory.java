@@ -231,7 +231,7 @@ public class ModifyResponseBodyGatewayFilterFactory extends
 		}
 
 	}
-
+	// 改变响应的body
 	protected class ModifiedServerHttpResponse extends ServerHttpResponseDecorator {
 
 		private final ServerWebExchange exchange;
