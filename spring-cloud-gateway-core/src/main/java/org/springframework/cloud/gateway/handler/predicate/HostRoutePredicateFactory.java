@@ -62,6 +62,7 @@ public class HostRoutePredicateFactory
 		return new GatewayPredicate() {
 			@Override
 			public boolean test(ServerWebExchange exchange) {
+				// 取出host根据host匹配
 				String host = exchange.getRequest().getHeaders().getFirst("Host");
 				Optional<String> optionalPattern = config.getPatterns().stream()
 						.filter(pattern -> pathMatcher.match(pattern, host)).findFirst();
